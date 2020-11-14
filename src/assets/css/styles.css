@@ -1,0 +1,454 @@
+/* Importar las fuentes personalizadas */
+@font-face{
+    font-family: "SFProDisplay-Black";
+    src: url("fonts/SFProDisplay-Black.ttf");
+}
+
+@font-face{
+    font-family: "SFProDisplay-Medium";
+    src: url("fonts/SFProDisplay-Medium.ttf");
+}
+
+@font-face{
+    font-family: "SFProText-Bold";
+    src: url("fonts/SFProText-Bold.ttf");
+}
+
+@font-face{
+    font-family: "SFProText-Regular";
+    src: url("fonts/SFProText-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Allura-Regular";
+    src: url("fonts/Allura-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Aramis";
+    src: url("fonts/Aramis_Italic.ttf");
+}
+
+/* ======================================================================== */
+/* Estilos Generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "SFProText-Regular";
+    font-size: 20px;
+    background-image: url("../img/patron.jpg");
+    background-attachment: fixed;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* ======================================================================== */
+/* Header */
+header{
+    display: block;
+    width: 100%;
+    height: 21%;
+    position: fixed;
+    background-image: url("../img/radical.png");
+    /*background-color: rgba(53, 103, 164, 0.5);*/
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 22px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover,
+.actived{
+    background: rgba(191, 17, 207, 0.8);
+    border-radius: 20px;
+}
+
+/* ======================================================================== */
+/* Panel Usuarios */
+#panelUsuario{
+    /*background-color: rgba(212, 241, 46, 0.5);*/
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#panelUsuario ul{
+    display: block;
+    width: 100%;
+    height: inherit;
+    margin: 0px auto;
+    text-align: right;
+}
+
+#panelUsuario ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* ======================================================================== */
+/* Panel Logo */
+#panelLogo{
+    /*background-color: rgba(190, 58, 49, 0.5);*/
+    height: 82px;
+    width: 100% ;
+}
+
+#textLogo{
+    font-family: "SFProDisplay-Black";
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-top: -90px;
+    font-family: "Aramis";
+}
+
+#logo{
+    width: 90px;
+    height: 90px;
+    margin-top: -15px;
+    margin-left: 20px;
+}
+
+/* ======================================================================== */
+/* Panel Info */
+#panelInfo{
+    /* background-color: rgba(233, 34, 183, 0.5);*/
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#panelInfo ul{
+    display: block;
+    width: 100%;
+    height: inherit;
+    margin: 0px auto;
+    text-align: left;
+}
+
+#panelInfo ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* ======================================================================== */
+/* Contenedor Principal */
+#content{
+    padding-top: 130px;
+    min-height: 700px;
+    height: auto;
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* ======================================================================== */
+/* Pié de página */
+#piePagina{
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================================================== */
+/* Sección Quiénes somos? */
+div.title{
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div.title h2{
+    display: block;
+    font-family: "Aramis";
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+div.title img{
+    margin-top: 20px;
+    margin: 0px auto;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+article.about{
+    width: 75%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+article h3 {
+    font-family: "Aramis";
+    font-size: 40px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1px;
+    padding-top: 45px;
+}
+article p{
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* ======================================================================== */
+/* Componente register */
+.container{
+    padding: 50px;
+    padding-top: 40px;
+}
+
+.container .image{
+  float: left;
+  width: 47%;
+}
+
+.container .image img{
+  width: 100%;
+}
+
+.container .data{
+  float: left;
+  width: 49%;
+  margin-left: 30px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form{
+    width: 80%;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="password"]{
+    width: 40%;
+    padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+    display: block;
+    font-size: 17px;
+    padding: 12px;
+    margin-top: 15px;
+    color: white;
+    background: rgba(10, 30, 209, 1);
+    border-radius: 50px;
+    border: 1px solid rgba(6, 18, 126,1);
+    cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+  width: 12%;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-edit{
+  background: orange;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.button-delete{
+  background: red;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.button-delete:hover,
+.button-edit:hover{
+  background: rgba(191, 17, 207, 0.8);
+  cursor: pointer;
+}
+
+
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(10, 30, 209, 0.8);
+    border: 1px solid rgba(6, 18, 126,1);
+    cursor: pointer;
+}
+
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form_error{
+    color: red;
+    font-family: "SFProText-Bold";
+    font-size: 15px;
+}
+
+.message{
+    padding: 5px;
+    border: 1px solid #eee;
+    width: 60%;
+}
+
+.success{
+    background: green;
+    color: white;
+}
+
+.message a{
+    color: white;
+}
+
+.failed{
+    background: red;
+    color: white;
+}
+
+/* ======================================================================== */
+/* Componente user */
+
+.leader{
+  list-style: none;
+  display: block;
+  float: left;
+  width: 29%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.leader .image{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.leader img{
+  width: 100%;
+}
+.leader a{
+  text-decoration: none;
+  color: black;
+}
+
+/* ======================================================================== */
+/* Componente Escúchanos */
+.listenUs{
+  list-style: none;
+  display: block;
+  float: left;
+  width: 46%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.listenUs h3 {
+  font-family: "Aramis";
+  font-size: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+  padding-top: 45px;
+}
+
+.listenUs a{
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.listenUs .image{
+  display: inline-block;
+  width: 15%;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.listenUs img{
+
+  width: 100%;
+}
+
+/* ======================================================================== */
+/* Componente timeTable */
+.time-table-button{
+  list-style: none;
+}
+
+article.time-table{
+  width: 75%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.time-table-button li{
+  list-style: none;
+
+}
+
+.time-table-button a{
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.time-table-button .image{
+  display: inline-block;
+  width: 15%;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.time-table-button img{
+  width: 100%;
+}

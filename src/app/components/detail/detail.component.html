@@ -1,0 +1,17 @@
+<div class="container" *ngIf="leader">
+
+  <div class="image" *ngIf="leader.image">
+    <img src="{{url+'get-image/'+leader.image}}" />
+  </div>
+
+  <div class="data">
+    <h1>{{leader.name}} {{leader.surname}}</h1>
+    <h3>{{leader.phoneNumber}}</h3>
+    <h3>{{leader.email}}</h3>
+
+    <p>
+      <a [routerLink]="['/editar', leader._id]" class="button-edit">Editar</a>
+      <a (click)="deleteLeader(leader._id)" class="button-delete">Borrar</a>
+    </p>
+  </div>
+</div>

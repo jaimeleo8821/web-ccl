@@ -1,0 +1,52 @@
+<div class="container" *ngIf="horario">
+  <h2>{{title}}</h2>
+
+  <div class="message success" *ngIf= "status == 'success'">
+      El horario se ha cambiado exitosamente. Puedes verlo <a [routerLink]="['/horarios']">aquí</a>
+  </div>
+
+  <div class="message failed" *ngIf= "status == 'failed'">
+      Ops! El horario no se ha podido Cambiar. Verifica la información.
+  </div>
+
+  <form #horarioForm = "ngForm" (ngSubmit)="onSubmit()">
+  <!--horarioForm-->
+    <p>
+      <label for="infoMiercoles">Culto miércoles</label>
+      <input type="text" name="infoMiercoles" #infoMiercoles="ngModel" [(ngModel)]= "horario.infoMiercoles" required />
+      <span class="form_error"  *ngIf= "infoMiercoles.touched && infoMiercoles.invalid">
+        Este campo es obligatorio
+      </span>
+    </p>
+
+    <p>
+      <label for="infoViernes">Culto viernes</label>
+      <input type="text" name="infoViernes" #infoViernes="ngModel" [(ngModel)]= "horario.infoViernes" required />
+      <span class="form_error"  *ngIf= "infoViernes.touched && infoViernes.invalid">
+        Este campo es obligatorio
+      </span>
+    </p>
+
+    <p>
+      <label for="infoSabado">Culto sábado</label>
+      <input type="text" name="infoSabado" #infoSabado="ngModel" [(ngModel)]= "horario.infoSabado" required />
+      <span class="form_error"  *ngIf= "infoSabado.touched && infoSabado.invalid">
+        Este campo es obligatorio
+      </span>
+    </p>
+
+    <p>
+      <label for="infoDomingo">Cultos dominicales</label>
+      <input type="text" name="infoDomingo" #infoDomingo="ngModel" [(ngModel)]= "horario.infoDomingo" required />
+      <span class="form_error"  *ngIf= "infoDomingo.touched && infoDomingo.invalid">
+        Este campo es obligatorio
+      </span>
+    </p>
+
+
+    <p>
+      <input type="submit" value="Enviar" [disabled]= "horarioForm.form.invalid" />
+      <a (click)="deleteHorario(horario._id)" class="button-delete">Borrar</a>
+    </p>
+  </form>
+</div>

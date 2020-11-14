@@ -1,0 +1,42 @@
+<div class="title">
+  <h2>{{title}}</h2>
+</div>
+
+<article *ngIf="horario" class="time-table">
+  <h3>{{cultoMiercoles}}</h3>
+  <p>
+      {{horario.infoMiercoles}}
+  </p>
+
+  <h3>{{cultoViernes}}</h3>
+  <p>
+    {{horario.infoViernes}}
+  </p>
+
+  <h3>{{cultoSabado}}</h3>
+  <p>
+    {{horario.infoSabado}}
+  </p>
+
+  <h3>{{cultoDomingo}}</h3>
+  <p>
+    {{horario.infoDomingo}}
+  </p>
+
+  <h3>{{formularioRegisto}}</h3>
+  <p>
+      No olvides registrarte en el siguiente enlace cada semana en los cultos para tener tu sitio asegurado
+      <span>
+        <ul>
+          <li class="time-table-button">
+            <a href="https://forms.gle/wNo224W3dpR2aVB69" >
+              <div class="image">
+                <img src="../../../assets/img/logo.png" />
+              </div>
+              Formulario Único de Inscripción
+            </a>
+          </li>
+        </ul>
+      </span>
+  </p>
+</article>

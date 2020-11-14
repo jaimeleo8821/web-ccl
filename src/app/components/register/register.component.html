@@ -1,0 +1,71 @@
+<div class="container" *ngIf="leader">
+    <h2>{{title}}</h2>
+
+    <div class="message success" *ngIf= "status == 'success'">
+        El usuario se ha creado exitosamente. Puedes verlo <a [routerLink]="['/lider/', save_leader._id]">aquí</a>
+    </div>
+
+    <div class="message failed" *ngIf= "status == 'failed'">
+        Ops! El usuario no se ha podido crear. Verifica la información.
+    </div>
+
+    <form #leaderForm = "ngForm" (ngSubmit)="onSubmit(leaderForm)">
+        <p>
+            <label for="name">Nombre(s)</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]= "leader.name" required />
+            <span class="form_error"  *ngIf= "name.touched && name.invalid">
+                El nombre es obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="surname">Apellidos</label>
+            <input type="text" name="surname" #surname="ngModel" [(ngModel)]= "leader.surname" required />
+            <span class="form_error"  *ngIf= "surname.touched && surname.invalid">
+                El apellido es obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="phoneNumber">Número de teléfono</label>
+            <input type="tel" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]= "leader.phoneNumber" required />
+            <span class="form_error"  *ngIf= "phoneNumber.touched && phoneNumber.invalid">
+                El número de teléfono es obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="address">Dirección</label>
+            <input type="text" name="address" #address="ngModel" [(ngModel)]= "leader.address" required />
+            <span class="form_error"  *ngIf= "address.touched && address.invalid">
+                La dirección es obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="email">Correo Electrónico</label>
+            <input type="email" name="email" #email="ngModel" [(ngModel)]= "leader.email" required />
+            <span class="form_error"  *ngIf= "email.touched && email.invalid">
+                El correo electrónico es obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="birthday">Fecha de Nacimiento</label>
+            <input type="date" name="birthday" #birthday="ngModel" [(ngModel)]= "leader.birthday" required />
+            <span class="form_error"  *ngIf= "birthday.touched && birthday.invalid">
+                La fecha de nacimiento es obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="photo">Adjunte su foto</label>
+            <span class="image" *ngIf="leader.image" style="float:none;">
+              <img src="{{url+'get-image/'+leader.image}}" style="width:100px;"/>
+            </span><br/>
+            <input type="file" name="photo" placeholder="Subir Imagen" (change)= "fileChangeEvent($event)" />
+        </p>
+
+        <input type="submit" value="Enviar" [disabled]= "leaderForm.form.invalid" />
+    </form>
+</div>

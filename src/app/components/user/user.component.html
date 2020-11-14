@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Líderes</h2>
+
+  <ul>
+    <li *ngFor="let leader of leaders" class="leader">
+      <a [routerLink]="['/lider', leader._id]" >
+        <div class="image">
+          <img src="{{url+'get-image/'+leader.image}}" *ngIf="leader.image"/>
+        </div>
+        <h3>{{leader.name}} {{leader.surname}} </h3>
+      </a>
+    </li>
+  </ul>
+</div>
