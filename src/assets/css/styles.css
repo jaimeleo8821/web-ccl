@@ -286,7 +286,8 @@ form input[type="submit"],
 
 .button-edit,
 .button-delete{
-  width: 12%;
+  width: 40%;
+  text-align: center;
   float: left;
   margin-right: 10px;
   text-align: center;
@@ -451,4 +452,10 @@ article.time-table{
 
 .time-table-button img{
   width: 100%;
+}
+
+.confirm{
+  display: block;
+  font-weight: bold;
+  margin-top: 30px;
 }

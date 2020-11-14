@@ -15,6 +15,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class DetailComponent implements OnInit {
   public url: string;
   public leader: Leader;
+  public confirm: boolean;
 
   constructor(
     private _leaderService: LeaderService,
@@ -22,6 +23,7 @@ export class DetailComponent implements OnInit {
     private _route: ActivatedRoute
   ){
     this.url = global.url;
+    this.confirm = false;
   }
 
   ngOnInit(){
@@ -40,6 +42,10 @@ export class DetailComponent implements OnInit {
         console.log(<any>error);
       }
     )
+  }
+
+  setConfirm(confirm){
+    this.confirm = confirm;
   }
 
   deleteLeader(id){
