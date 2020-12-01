@@ -42,7 +42,7 @@ export class LeaderService{
     */
    getLeaders(): Observable<any>{
      /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-     let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+     let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
      /* Petición por GET para obtener los elementos almacenados en la BD
       La URL del API (global) + la ruta del método del API a usar + un objeto
@@ -55,7 +55,7 @@ export class LeaderService{
     */
     getLeader(id): Observable<any>{
       /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-      let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+      let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
       return this._http.get(this.url+'leader/'+id, {headers: headers});
     }
@@ -65,7 +65,7 @@ export class LeaderService{
     */
    deleteLeader(id): Observable<any>{
     /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this._http.delete(this.url+'leader/'+id, {headers: headers});
   }
@@ -78,7 +78,7 @@ export class LeaderService{
      let params = JSON.stringify(leader);
 
     /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this._http.put(this.url+'leader/'+leader._id, params, {headers: headers});
   }
