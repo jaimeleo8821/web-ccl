@@ -38,7 +38,7 @@ export class HorarioService{
     */
    getHorarios(): Observable<any>{
      /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-     let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+     let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
      /* Petición por GET para obtener los elementos almacenados en la BD
       La URL del API (global) + la ruta del método del API a usar + un objeto
@@ -51,7 +51,7 @@ export class HorarioService{
     */
     getHorario(id): Observable<any>{
       /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-      let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+      let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
       return this._http.get(this.url+'horario/'+id, {headers: headers});
     }
@@ -61,7 +61,7 @@ export class HorarioService{
     */
    deleteHorario(id): Observable<any>{
     /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this._http.delete(this.url+'horario/'+id, {headers: headers});
   }
@@ -74,7 +74,7 @@ export class HorarioService{
      let params = JSON.stringify(horario);
 
     /* Variable para establecer las cabeceras, cómo se va a enviar la información */
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this._http.put(this.url+'horario/'+horario._id, params, {headers: headers});
   }
